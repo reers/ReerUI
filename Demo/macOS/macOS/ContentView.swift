@@ -10,11 +10,26 @@ import ReerUI
 
 struct ContentView: View {
     var body: some View {
-        Loading()
-            .frame(width: 100, height: 100)
+        NavigationSplitView {
+            Sidebar()
+        } detail: {
+            Text("ReerUI")
+                .font(.system(size: 80, weight: .medium))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
     }
 }
 
-#Preview {
-    ContentView()
+struct Sidebar: View {
+    @State private var showMenu = false
+    
+    var body: some View {
+        List {
+            NavigationLink(destination: Loading().padding()) {
+                LeftLabel(title: "Loading", icon: { Loading(gradientColor: .primary, ballColor: .primary) })
+            }
+        }
+        .listStyle(SidebarListStyle())
+    }
 }
+

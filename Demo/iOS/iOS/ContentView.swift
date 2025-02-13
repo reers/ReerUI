@@ -6,15 +6,12 @@
 //
 
 import SwiftUI
+import ReerUI
 
 struct ContentView: View {
+    @State private var showMenu = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-            Text("Hello, world!")
-        }
-        .padding()
+        HamburgerMenu(isActive: $showMenu, lineLength: 80, lineHeight: 4)
     }
 }
 
