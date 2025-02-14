@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D05D3F452D5DF86700A745FC /* ReerUI in Frameworks */ = {isa = PBXBuildFile; productRef = D05D3F442D5DF86700A745FC /* ReerUI */; };
 		D0933D5F2D5F0FDF00BD05A1 /* ReerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0933D5E2D5F0FDF00BD05A1 /* ReerKit */; };
+		D0933D862D5F1C8800BD05A1 /* SharedDemo in Frameworks */ = {isa = PBXBuildFile; productRef = D0933D852D5F1C8800BD05A1 /* SharedDemo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0933D862D5F1C8800BD05A1 /* SharedDemo in Frameworks */,
 				D05D3F452D5DF86700A745FC /* ReerUI in Frameworks */,
 				D0933D5F2D5F0FDF00BD05A1 /* ReerKit in Frameworks */,
 			);
@@ -74,6 +76,7 @@
 			packageProductDependencies = (
 				D05D3F442D5DF86700A745FC /* ReerUI */,
 				D0933D5E2D5F0FDF00BD05A1 /* ReerKit */,
+				D0933D852D5F1C8800BD05A1 /* SharedDemo */,
 			);
 			productName = macOS;
 			productReference = D05D3F312D5DF85B00A745FC /* macOS.app */;
@@ -106,6 +109,7 @@
 			packageReferences = (
 				D05D3F432D5DF86700A745FC /* XCLocalSwiftPackageReference "../../../ReerUI" */,
 				D0933D5D2D5F0FDF00BD05A1 /* XCRemoteSwiftPackageReference "ReerKit" */,
+				D0933D842D5F1C8800BD05A1 /* XCLocalSwiftPackageReference "../SharedDemo" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D05D3F322D5DF85B00A745FC /* Products */;
@@ -336,6 +340,10 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../ReerUI;
 		};
+		D0933D842D5F1C8800BD05A1 /* XCLocalSwiftPackageReference "../SharedDemo" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../SharedDemo;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -358,6 +366,10 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D0933D5D2D5F0FDF00BD05A1 /* XCRemoteSwiftPackageReference "ReerKit" */;
 			productName = ReerKit;
+		};
+		D0933D852D5F1C8800BD05A1 /* SharedDemo */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedDemo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D05D3F272D5DF84500A745FC /* ReerUI in Frameworks */ = {isa = PBXBuildFile; productRef = D05D3F262D5DF84500A745FC /* ReerUI */; };
+		D0933D832D5F1C8100BD05A1 /* SharedDemo in Frameworks */ = {isa = PBXBuildFile; productRef = D0933D822D5F1C8100BD05A1 /* SharedDemo */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0933D832D5F1C8100BD05A1 /* SharedDemo in Frameworks */,
 				D05D3F272D5DF84500A745FC /* ReerUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +73,7 @@
 			name = iOS;
 			packageProductDependencies = (
 				D05D3F262D5DF84500A745FC /* ReerUI */,
+				D0933D822D5F1C8100BD05A1 /* SharedDemo */,
 			);
 			productName = iOS;
 			productReference = D05D3F142D5DF82400A745FC /* iOS.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				D05D3F252D5DF84500A745FC /* XCLocalSwiftPackageReference "../../../ReerUI" */,
+				D0933D812D5F1C8100BD05A1 /* XCLocalSwiftPackageReference "../SharedDemo" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D05D3F152D5DF82400A745FC /* Products */;
@@ -268,7 +272,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,7 +301,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,12 +343,20 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../../ReerUI;
 		};
+		D0933D812D5F1C8100BD05A1 /* XCLocalSwiftPackageReference "../SharedDemo" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../SharedDemo;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		D05D3F262D5DF84500A745FC /* ReerUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReerUI;
+		};
+		D0933D822D5F1C8100BD05A1 /* SharedDemo */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SharedDemo;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

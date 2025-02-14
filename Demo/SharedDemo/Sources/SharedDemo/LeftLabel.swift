@@ -7,11 +7,16 @@
 
 import SwiftUI
 
-struct LeftLabel<Icon: View>: View {
+public struct LeftLabel<Icon: View>: View {
     let title: String
     @ViewBuilder var icon: () -> Icon
     
-    var body: some View {
+    public init(title: String, icon: @escaping () -> Icon) {
+        self.title = title
+        self.icon = icon
+    }
+    
+    public var body: some View {
         Label(
             title: {
                 Text(title)

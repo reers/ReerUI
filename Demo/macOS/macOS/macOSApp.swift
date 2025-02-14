@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SharedDemo
 
 @main
+@available(macOS 16.0, *)
 struct macOSApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SharedDemoView()
                 .frame(minWidth: 780, minHeight: 600)
         }
         .windowStyle(.hiddenTitleBar)

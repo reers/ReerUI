@@ -1,31 +1,20 @@
 //
-//  ContentView.swift
-//  macOS
+//  Sidebar.swift
+//  SharedDemo
 //
-//  Created by phoenix on 2025/2/13.
+//  Created by phoenix on 2025/2/14.
 //
 
 import SwiftUI
 import ReerUI
-import ReerKit
 
-struct ContentView: View {
-    var body: some View {
-        NavigationSplitView {
-            Sidebar()
-        } detail: {
-            Text("ReerUI")
-                .font(.system(size: 80, weight: .medium))
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
-    }
-}
-
-struct Sidebar: View {
+public struct Sidebar: View {
+    public init() {}
+    
     @State private var showMenu = false
     @State private var progress: CGFloat = 0.65
     
-    var body: some View {
+    public var body: some View {
         List {
             NavigationLink(destination: Loading().padding()) {
                 LeftLabel(title: "Loading", icon: { Loading(gradientColor: .primary, ballColor: .primary) })
@@ -55,8 +44,13 @@ struct Sidebar: View {
                 })
             }
             NavigationLink(destination: StunningEffect().padding()) {
-                LeftLabel(title: "StunningEffect", icon: { Image(systemName: "tennisball.fill").resizable() })
+                LeftLabel(title: "StunningEffect", icon: { Circle() })
             }
+            #if os(iOS)
+            NavigationLink(destination: HamburgerMenu(isActive: $showMenu, lineLength: 80, lineHeight: 4).padding()) {
+                LeftLabel(title: "StunningEffect", icon: { HamburgerMenu(isActive: $showMenu, lineLength: 20, lineHeight: 2) })
+            }
+            #endif
         }
         .listStyle(SidebarListStyle())
     }
