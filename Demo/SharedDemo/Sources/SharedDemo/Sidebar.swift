@@ -56,7 +56,10 @@ public struct Sidebar: View {
             
             #if os(iOS)
             NavigationLink(destination: HamburgerMenu(isActive: $showMenu, lineLength: 80, lineHeight: 4).padding()) {
-                LeftLabel(title: "StunningEffect", icon: { HamburgerMenu(isActive: $showMenu, lineLength: 20, lineHeight: 2) })
+                LeftLabel(title: "HamburgerMenu", icon: { HamburgerMenu(isActive: $showMenu, lineLength: 20, lineHeight: 2) })
+            }
+            NavigationLink(destination: VariableBlurDemo().padding()) {
+                LeftLabel(title: "VariableBlur", icon: { Image(systemName: "moonphase.waxing.crescent").resizable().aspectRatio(contentMode: .fit) })
             }
             #endif
         }
