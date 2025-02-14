@@ -7,6 +7,7 @@
 
 import SwiftUI
 import ReerUI
+import ReerKit
 
 struct ContentView: View {
     var body: some View {
@@ -33,6 +34,24 @@ struct Sidebar: View {
                 LeftLabel(title: "ProgressRing", icon: {
                     ProgressRing(progress: $progress, gradientColors: [.cyan, .blue], lineWidthRatio: 0.3)
                         .frame(width: 15, height: 15)
+                })
+            }
+            NavigationLink(destination: GradientProgressRingDemo()) {
+                LeftLabel(title: "GradientProgressRing", icon: {
+                    GradientProgressRing(
+                        angleLength: 240,
+                        rotateAngle: 150,
+                        progress: $progress,
+                        strokeWidth: 4,
+                        bgColor: Color(.lightGray.withAlphaComponent(0.5)),
+                        gradientStops: [
+                            .init(color: Color(.re(hex: 0xFF86AA)), location: 0.17),
+                            .init(color: Color(.re(hex: 0xFF4B75)), location: 0.34),
+                            .init(color: Color(.re(hex: 0xEF3CFF)), location: 0.5),
+                            .init(color: Color(.re(hex: 0x7E5EFF)), location: 0.66),
+                            .init(color: Color(.re(hex: 0x8064FF)), location: 0.83),
+                        ]
+                    )
                 })
             }
         }

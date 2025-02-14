@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D05D3F452D5DF86700A745FC /* ReerUI in Frameworks */ = {isa = PBXBuildFile; productRef = D05D3F442D5DF86700A745FC /* ReerUI */; };
+		D0933D5F2D5F0FDF00BD05A1 /* ReerKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0933D5E2D5F0FDF00BD05A1 /* ReerKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D05D3F452D5DF86700A745FC /* ReerUI in Frameworks */,
+				D0933D5F2D5F0FDF00BD05A1 /* ReerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,7 @@
 			name = macOS;
 			packageProductDependencies = (
 				D05D3F442D5DF86700A745FC /* ReerUI */,
+				D0933D5E2D5F0FDF00BD05A1 /* ReerKit */,
 			);
 			productName = macOS;
 			productReference = D05D3F312D5DF85B00A745FC /* macOS.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				D05D3F432D5DF86700A745FC /* XCLocalSwiftPackageReference "../../../ReerUI" */,
+				D0933D5D2D5F0FDF00BD05A1 /* XCRemoteSwiftPackageReference "ReerKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D05D3F322D5DF85B00A745FC /* Products */;
@@ -334,10 +338,26 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		D0933D5D2D5F0FDF00BD05A1 /* XCRemoteSwiftPackageReference "ReerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reers/ReerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		D05D3F442D5DF86700A745FC /* ReerUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ReerUI;
+		};
+		D0933D5E2D5F0FDF00BD05A1 /* ReerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0933D5D2D5F0FDF00BD05A1 /* XCRemoteSwiftPackageReference "ReerKit" */;
+			productName = ReerKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -1,0 +1,15 @@
+{
+  "originHash" : "8d4988b4b6385642c7b8430a0f0b03bec7d34bca1675da43a1be658dd0501257",
+  "pins" : [
+    {
+      "identity" : "reerkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/reers/ReerKit.git",
+      "state" : {
+        "revision" : "999bbce4a0c2600756f6a740cd36d450ca6d9125",
+        "version" : "1.1.2"
+      }
+    }
+  ],
+  "version" : 3
+}
