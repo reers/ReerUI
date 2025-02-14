@@ -46,6 +46,14 @@ public struct Sidebar: View {
             NavigationLink(destination: StunningEffect().padding()) {
                 LeftLabel(title: "StunningEffect", icon: { Circle() })
             }
+            #if os(macOS)
+            if #available(macOS 15.0, *) {
+                NavigationLink(destination: IntelligenceLightView().padding()) {
+                    LeftLabel(title: "IntelligenceLight", icon: { RoundedRectangle(cornerRadius: 2) })
+                }
+            }
+            #endif
+            
             #if os(iOS)
             NavigationLink(destination: HamburgerMenu(isActive: $showMenu, lineLength: 80, lineHeight: 4).padding()) {
                 LeftLabel(title: "StunningEffect", icon: { HamburgerMenu(isActive: $showMenu, lineLength: 20, lineHeight: 2) })
