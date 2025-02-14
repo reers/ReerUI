@@ -54,6 +54,9 @@ struct Sidebar: View {
                     )
                 })
             }
+            NavigationLink(destination: StunningEffect().padding()) {
+                LeftLabel(title: "StunningEffect", icon: { Image(systemName: "tennisball.fill").resizable() })
+            }
         }
         .listStyle(SidebarListStyle())
     }
