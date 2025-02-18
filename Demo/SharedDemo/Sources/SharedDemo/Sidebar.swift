@@ -67,6 +67,12 @@ public struct Sidebar: View {
                     LeftLabel(title: "StunningEffect", icon: { Circle() })
                 }
                 
+//                if #available(iOS 17.0, macOS 14.0, *) {
+//                    NavigationLink(destination: ShaderView(name: "SDF::main")) {
+//                        LeftLabel(title: "ShaderView", icon: { Circle() })
+//                    }
+//                }
+                
                 #if os(iOS)
                 NavigationLink(destination: VariableBlurDemo().padding()) {
                     LeftLabel(title: "VariableBlur", icon: { Image(systemName: "moonphase.waxing.crescent").resizable().aspectRatio(contentMode: .fit) })
